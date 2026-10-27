@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View orders - Order Management App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>View orders</h1>
+    <p>Select an option:</p>
+
+    <label><input type="radio" name="view" value="../server/viewAllOrders.php" checked> View all orders</label>
+    <label><input type="radio" name="view" value="viewOrder.html"> View one order by its code</label>
+
+    <div class="center">
+      <a class="button secondary" href="menu.html">Back to operations menu</a>
+      <a class="button secondary" href="index.html">Back to start</a>
+      <button class="button" id="goButton">Go</button>
+    </div>
+  </div>
+
+  <script>
+    // Va a la página de la opción seleccionada
+    function goToView() {
+      const selected = document.querySelector('input[name="view"]:checked');
+      window.location.href = selected.value;
+    }
+    // Asocia la función al evento click del botón
+    document.getElementById("goButton").addEventListener("click", goToView);
+  </script>
+</body>
+</html>

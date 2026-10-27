@@ -1,0 +1,44 @@
+cat > application/client/documentation.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation - Order Management App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Documentation</h1>
+
+    <h2>About the application</h2>
+    <p>
+      Order Management App is an e-commerce tool used by the sales staff
+      of our European store chain to create and consult customer orders.
+    </p>
+
+    <h2>Operations menu</h2>
+
+    <h3>Create a new order</h3>
+    <p>
+      Fill in the order code and the customer data (full name, address,
+      email and phone). Tick the products the customer wants, enter the
+      quantity for each one and press Send. The application shows the
+      total price including 21% VAT and saves the order.
+    </p>
+
+    <h3>View orders</h3>
+    <p>
+      <strong>All orders:</strong> shows a table with every saved order.<br>
+      <strong>One order:</strong> type an order code and the application
+      shows only that order. If the code does not exist, an error is shown.
+    </p>
+
+    <div class="center">
+      <a class="button secondary" href="index.html">Back to start</a>
+      <a class="button" href="login.html">Login</a>
+    </div>
+  </div>
+</body>
+</html>
+EOF

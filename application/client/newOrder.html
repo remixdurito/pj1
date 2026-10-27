@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New order - Order Management App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>New order</h1>
+
+    <form id="orderForm">
+      <label for="orderId">Order code</label>
+      <input type="text" id="orderId" name="orderId">
+
+      <label for="fullName">Customer full name</label>
+      <input type="text" id="fullName" name="fullName">
+
+      <label for="address">Customer address</label>
+      <input type="text" id="address" name="address">
+
+      <label for="email">Customer email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Customer phone</label>
+      <input type="text" id="phone" name="phone">
+
+      <h2>Products</h2>
+      <table>
+        <tr>
+          <th>Select</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="products[0][selected]" class="productCheck"></td>
+          <td>Laptop <input type="hidden" name="products[0][name]" value="Laptop"></td>
+          <td>899.00 € <input type="hidden" name="products[0][price]" value="899.00"></td>
+          <td><input type="number" name="products[0][quantity]" min="1" value="1" disabled></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="products[1][selected]" class="productCheck"></td>
+          <td>27" Monitor <input type="hidden" name="products[1][name]" value="27&quot; Monitor"></td>
+          <td>189.90 € <input type="hidden" name="products[1][price]" value="189.90"></td>
+          <td><input type="number" name="products[1][quantity]" min="1" value="1" disabled></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="products[2][selected]" class="productCheck"></td>
+          <td>Mechanical keyboard <input type="hidden" name="products[2][name]" value="Mechanical keyboard"></td>
+          <td>79.90 € <input type="hidden" name="products[2][price]" value="79.90"></td>
+          <td><input type="number" name="products[2][quantity]" min="1" value="1" disabled></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="products[3][selected]" class="productCheck"></td>
+          <td>Wireless mouse <input type="hidden" name="products[3][name]" value="Wireless mouse"></td>
+          <td>24.90 € <input type="hidden" name="products[3][price]" value="24.90"></td>
+          <td><input type="number" name="products[3][quantity]" min="1" value="1" disabled></td>
+        </tr>
+      </table>
+
+      <p id="message" class="error"></p>
+      <p id="result"></p>
+
+      <div class="center">
+        <button type="button" class="button" id="sendButton">Send order</button>
+        <a class="button secondary" href="menu.html">Back to operations menu</a>
+        <a class="button secondary" href="index.html">Back to start</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/newOrder.js"></script>
+</body>
+</html>
